@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Project</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 36px;
+            color: #007bff;
+            margin: 20px 0;
+            padding: 10px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        main div {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        main div:hover {
+            transform: scale(1.05);
+        }
+
+        main img {
+            width: 100%;
+            height: auto;
+        }
+
+        main h4 {
+            margin: 0;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        main a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">BANK PROJECT</h1>
+    </header>
+    <main>
+        <div>
+            <img src="{% static 'images/bank1.png' %}" alt="Account Creation">
+            <a href="{% url 'create' %}"><h4>ACCOUNT CREATION</h4></a>
+        </div>
+        <div>
+            <img src="{% static 'images/bank2.png' %}" alt="PIN Generation">
+            <a href="{% url 'pin' %}"><h4>PIN GENERATION</h4></a>
+        </div>
+        <div>
+            <img src="{% static 'images/bank3.png' %}" alt="Balance Enquiry">
+            <a href="{% url 'balance' %}"><h4>BALANCE ENQUIRY</h4></a>
+        </div>
+        <div>
+            <img src="{% static 'images/bank4.png' %}" alt="Withdraw">
+            <a href="{% url 'withdraw' %}"><h4>WITHDRAW</h4></a>
+        </div>
+        <div>
+            <img src="{% static 'images/bank5.png' %}" alt="Deposit">
+            <a href="{% url 'deposit' %}"><h4>DEPOSIT</h4></a>
+        </div>
+        <div>
+            <img src="{% static 'images/bank6.png' %}" alt="Transfer">
+            <a href="{% url 'transfer' %}"><h4>TRANSFER</h4></a>
+        </div>
+    </main>
+</body>
+</html>
