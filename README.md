@@ -21,7 +21,7 @@ this is a project of bank management where user can create an account and do bas
 
   # steps to set up this project
   -clone this project using
-  https://github.com/Bank/Bank.git
+ https://github.com/SHAIKSHAREEF0572/Bank.git
   
   - install the necessary packages
     
